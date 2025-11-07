@@ -1,0 +1,44 @@
+
+ @media only screen and (min-width: 480px) and (max-width: 750px) {
+ }
+ body{
+  background-color: #1B1B1B;
+  color: rgb(255, 255, 255);
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+}
+  h1{
+    color:rgb(255, 255, 255);
+    text-align: center;
+  }
+  a:link{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  a:visited{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  a:hover{
+    color:rgb(207, 42, 81);
+    text-decoration: underline;
+  }
+  
+  .topnav {
+    text-align: center;
+    overflow: hidden;
+  }
+  .topnav a {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  .topnav a:hover {
+    color:rgb(207, 42, 81);
+  }
+  .topnav a.active {
+    color: white;
+  }

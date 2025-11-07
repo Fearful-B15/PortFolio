@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>
+Contact Me
+</title>
+<link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
+<style>
+  th {
+    background: Black;
+  }
+  td {
+    background: white;
+    color: black;
+    height: 50%;
+  }
+  table {
+    width: 25%;
+    height: 50px;
+    border-color: black;
+  }
+  #responseMessage {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-family: Bodoni;
+  }
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="Index.html">My Home</a>
+    <a href="Projects.html">My Projects</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </div>
+  <hr>
+  <h1>Welcome to Contact page</h1>
+  <hr>
+  <p>Thank you for taking a look at my personal website today,</p>
+  <p>Feel free to share your thoughts and feelings about my portfolio.</p>
+  <p>If you wish to contact me through another means my social media shall be linked below</p>
+
+  <!-- Form  here -->
+   <div class="contact_form">
+    <form id="contactForm"> 
+    <label for="Name">Name:</label><br>
+    <input type="text" name="Name" style="border:solid 5px"required><br>
+
+    <label for="Surname">Surname:</label><br>
+    <input type="text" name="Surname" style="border:solid 5px" required><br>
+
+    <label for="Email">Email:</label><br>
+    <input type="text" name="Email" style="border:solid 5px" required><br>
+
+    <label for="Comment">Comment:</label><br>
+    <textarea name="Comment" rows="4" cols="40" style="border:solid 5px" required></textarea><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" style="font-size:15px; background-color:black; color: white; padding: 10px 20px; border: none;" value="Submit">
+  </form>
+  </div>
+  <!-- Message that will appear after form submission -->
+  <p id="responseMessage">Response has been sent!</p>
+
+  <!-- JavaScript to show confirmation message -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents form from reloading the page
+      document.getElementById('responseMessage').style.display = 'block'; // Show the response message
+    });
+  </script>
+
+  <h3>Social Media Links</h3>
+  <ul>
+    <li><a href="https://www.facebook.com/dian.vaneyk.9">Facebook</a></li>
+    <li><a href="https://www.instagram.com/dian_van_eyk/?hl=en">Instagram</a></li>
+    <li><a href="https://www.linkedin.com/in/dian-van-eyk-b6b6ab28b/">LinkedIn</a></li>
+  </ul>
+</body>
+</html>

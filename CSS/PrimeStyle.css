@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Bodoni;
+  src: url(fonnts.com-LTC-Bodoni-Pro-.otf);
+}
+body{
+  background-color: #1ba6b0;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+p,h2,h3,h4,ol,img{
+  position: relative;
+  left: 2.5%;
+  font-family: Bodoni;
+}
+.contact_form{
+  position: relative;
+  left: 2.5%;
+}
+  h1{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-family: Bodoni;
+  }
+  a:link{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    left: 2.5%;
+  }
+  a:visited{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    left: 2.5%;
+  }
+  
+  a:hover{
+    color:rgb(207, 42, 81);
+    text-decoration: underline;
+    position: relative;
+    left: 2.5%;
+  }
+  
+  .topnav {
+    text-align: center;
+    overflow: hidden;
+  }
+  .topnav a {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    left: 0%;
+  }
+  .topnav a:hover {
+    color:rgb(207, 42, 81);
+  }
+  .topnav a.active {
+    color: white;
+  }
+  
+ @media only screen and (min-width: 480px) and (max-width: 750px) {
+
+img{
+  width:200px;
+  height:200px
+}
+body{
+ background-color: #1ba6b0;
+ color: rgb(255, 255, 255);
+ font-family: Georgia, Times, 'Times New Roman', serif;
+ font-size: 18px;
+ left: 10%;
+}
+ h1{
+   color:rgb(255, 255, 255);
+   text-align: center;
+   left: 10%;
+ }
+ a:link{
+   color:rgb(255, 255, 255);
+   text-decoration: none;
+ }
+ a:visited{
+   color:rgb(255, 255, 255);
+   text-decoration: none;
+ }
+ 
+ a:hover{
+   color:rgb(207, 42, 81);
+   text-decoration: underline;
+ }
+ 
+ .topnav {
+   text-align: center;
+   overflow: hidden;
+ }
+ .topnav a {
+   color: rgb(255, 255, 255);
+   text-align: center;
+   padding: 18px 20px;
+   text-decoration: none;
+   font-size: 25px;
+ }
+ .topnav a:hover {
+   color:rgb(207, 42, 81);
+ }
+ .topnav a.active {
+   color: white;
+ }
+}
