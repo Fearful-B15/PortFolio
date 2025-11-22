@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoopedia Website</title>
+  <link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
+  <link rel="stylesheet" type="text/css" href="CSS/Screensizes.css">
+  <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
+  <style>
+    img {
+      margin: 10px;
+      border: 2px solid #ccc;
+      width: 100%;
+      max-width: 750px;
+      height: auto;
+    }
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .project-description {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .tech-stack {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .carousel-container {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel img {
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <hr>
+  <h1>Zoopedia Website</h1>
+  <hr>
+
+  <div class="topnav">
+    <a href="Index.html">My Home</a>
+    <a href="Case Studies.html">My Case Studies</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </div>
+  <hr>
+
+  <section>
+    <div class="project">
+      <h2>Zoopedia  </h2>
+
+      <p class="project-description">
+        Zoopedia is an educational and informative website I developed as part of a formative assignment. The goal of the project was to build a platform where users can compare different zoos and wildlife parks based on entry prices, available animals, and special features. It also includes detailed pages listing animals per zoo and a side-by-side comparison feature to help families and students plan visits.
+      </p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Animal listings by location</li>
+        <li>Responsive and structured layout for easy navigation</li>
+        <li>Visually categorized zoo features</li>
+        <li>Great for educational and recreational planning</li>
+      </ul>
+
+      <h3>Technology Stack</h3>
+      <p class="tech-stack">
+        <strong>Technologies Used:</strong> HTML, CSS, Responsive Layouts,
+      </p>
+
+      <h3>Project Screenshots</h3>
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="Project screenshots/Zoopedia_2.png" alt="Zoopedia homepage screenshot">
+          <img src="Project screenshots/Zoopedia 1.jpg" alt="Zoopedia animal comparison page">
+          <img src="Project screenshots/Zoopedia3.png" alt="Zoopedia pricing table">
+        </div>
+      </div>
+
+      <h3>Download the Zoopedia Website</h3>
+      <p>
+        Click below to download the source code for the Zoopedia project and explore it further.
+      </p>
+      <a href="Projects/Zoopedia.zip" download>Download Zoopedia Website</a>
+    </div>
+  </section>
+</body>
+</html>

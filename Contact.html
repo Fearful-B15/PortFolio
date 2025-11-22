@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
+  <link rel="stylesheet" type="text/css" href="CSS/Screensizes.css">
+  <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
+  <style>
+    .contact_form {
+      margin-top: 30px;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 45%;
+      padding: 8px;
+      border: solid 2px #000;
+      box-sizing: border-box;
+    }
+    textarea{
+      width: 45%;
+      padding: 8px;
+      border: solid 2px #000;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: color 0.3s ease, text-decoration 0.3s ease; 
+      width: 15%;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #cf2a51;
+      transition: color 0.3s ease, text-decoration 0.3s ease; 
+    }
+
+    #responseMessage {
+      display: none;
+      color: rgb(0, 0, 0);
+      margin-top: 15px;
+    }
+
+    .social_links {
+      margin-top: 30px;
+    }
+
+    .social_links ul {
+      padding-left: 20px;
+    }
+
+    .social_links a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .social_links a:hover {
+      color: #cf2a51;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <hr>
+  <h1>Welcome to my Contact page</h1>
+  <hr>
+    <div class="topnav">
+      <a href="Index.html">My Home</a>
+      <a href="Case Studies.html">My Case Studies</a>
+      <a href="Skills.html">About Me</a>
+      <a href="Contact.html">Contact Me</a>
+    </div>
+
+  <hr>
+  <section>
+    <h2>Contact Me</h2>
+    <p>Thank you for taking a look at my personal website today.</p>
+    <p>Feel free to share your thoughts and feelings about my portfolio.</p>
+    <p>If you wish to contact me through another means, my social media shall be linked below.</p>
+
+    <!-- Contact Form -->
+    <div class="contact_form">
+      <form id="contactForm"> 
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" required>
+
+        <label for="Surname">Surname:</label>
+        <input type="text" id="Surname" name="Surname" required>
+
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" name="Email" required>
+
+        <label for="Comment">Comment:</label>
+        <textarea name="Comment" rows="4" style="width: 45%; padding: 8px; border: solid 2px #000;" required></textarea><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <!-- Submission Response -->
+    <p id="responseMessage"></p>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        // Get the name value to display in the response message
+        var name = document.getElementById("Name").value;
+
+        // Get the email value to validate it
+        var email = document.getElementById("Email").value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        // Validate email
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Display personalized response message
+        document.getElementById('responseMessage').style.display = 'block'; 
+        document.getElementById('responseMessage').innerHTML = "Thank you, " + name + ", for your time! Your message has been successfully sent.";
+        document.getElementById('responseMessage').style.color = "green"; // Change text color to green
+
+        // Optionally clear the form after submission
+        document.getElementById('contactForm').reset();
+      });
+    </script>
+
+    <!-- Social Media -->
+    <div class="social_links">
+      <h3>Social Media Links</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/dian.vaneyk.9">Facebook</a></li>
+        <li><a href="https://www.instagram.com/dian_van_eyk/?hl=en">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/dian-van-eyk-b6b6ab28b/">LinkedIn</a></li>
+        <li><a href="Dian Rohen van Eyk CV (3).pdf"download>My CV</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

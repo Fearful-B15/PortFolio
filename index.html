@@ -1,35 +1,136 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>
-Home page
-</title>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
+  <link rel="stylesheet" type="text/css" href="CSS/Screensizes.css">
+  <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
+  <style>
+    .mySlides {display: none;}
+    img {vertical-align: middle; width:100%; max-width:750px; height:auto;}
 
-<link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
-<link rel="stylesheet"type="text/css" href="CSS/Screen sizes.css">
+    /* Custom Carousel Styles */
+    .carousel {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 10px;
+      padding: 20px 0;
+    }
+    .carousel img {
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    .prev {
+      left: -50px; 
+      border-radius: 3px 0 0 3px;
+    }
+    .next {
+      right: 50px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #000000;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+  </style>
 </head>
 <body>
-    <div class="topnav">
-        <a href="index.html">My Home</a>
-        <a href="Projects.html">My Projects</a>
-        <a href="Skills.html">About Me</a>
-    </div>
-    <hr>
-    <h1>Welcome to my personal Website!</h1>
-    <hr>
-    <p>Hi my name is Dian van Eyk.</p>
+  <hr>
+  <h1>Welcome to my personal website!</h1>
+  <hr>
 
-    <p>I am an aspiring UI artist and 3d model artist.</p>
+  <div class="topnav">
+    <a href="Index.html">My Home</a>
+    <a href="Case Studies.html">My Case Studies</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </div>
 
-    <p>This is my portfolio website feel free to visit each page and leave a comment or visit my LinkedIn Profile by clicking on my picture.</p>
-    
+  <hr>
+
+  <section>
+    <h2>Welcome To Dian van Eyk's Portfolio Webpage</h2>
+    <p>
+      I am an aspiring UI artist and website developer.<br>
+      Welcome to my personal portfolio! Here, you can find information about me, my skills, and my projects.<br>
+      This portfolio includes all of my work, an overview of each project, how I created them, and some personal projects like my miniature painting.<br>
+      I strive to give my best to every project and aim to deliver near-perfect satisfaction to all my clients.
+    </p>
+
     <h3>My Hobbies</h3>
     <ol>
-        <li> I enjoy designing artistic posters for fun during my sparetime.</li>
-        <li>I sometimes like to create website for fun usally based off things I enjoy like movies,games and even books and challenge myself by introducing new elements each times</li>
-        <li>I always try to challenge myself when creating by adding elements I am not familiar with..</li>
-        <li>I enjoy painting 3d models like warhammer 40k and age of sigmar models and want to teach myself to create dioramas</li>
-
+      <li>I enjoy designing artistic posters for fun during my spare time.</li>
+      <li>I sometimes create websites for fun, usually based on things I enjoy like movies, games, and books. I challenge myself by introducing new elements each time.</li>
+      <li>I have worked on project using image editing tools like Canva and the adobe products</li>
+      <li>I always try to push myself creatively by adding elements I am not familiar with.</li>
+      <li>I enjoy painting 3D models like Warhammer 40K and Age of Sigmar miniatures, and I want to teach myself how to build dioramas.</li>
     </ol>
 
+    <h3>Some of my work</h3>
+
+    <!-- Custom Carousel -->
+    <div class="carousel">
+      <img src="Project screenshots/1.jpg" alt="Model Motorcar Promotion">
+      <img src="Project screenshots/Bake1.png" alt="Gregories Bakery Homepage">
+      <img src="Project screenshots/Camperbot.png" alt="CamperBot Login Page">
+      <img src="Project screenshots/Zoopedia_2.png" alt="Zoopedia Homepage">
+      <img src="Project screenshots/2.jpg" alt="Model Motorcar Promotion">
+      <img src="Project screenshots/3.jpg" alt="Model Motorcar Promotion">
+      <img src="Project screenshots/4.jpg" alt="Model Motorcar Promotion">
+
+    </div>
+
+  </section>
 </body>
 </html>
