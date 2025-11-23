@@ -91,56 +91,7 @@
     <h2>Contact Me</h2>
     <p>Thank you for taking a look at my personal website today.</p>
     <p>Feel free to share your thoughts and feelings about my portfolio.</p>
-    <p>If you wish to contact me through another means, my social media shall be linked below.</p>
-
-    <!-- Contact Form -->
-    <div class="contact_form">
-      <form id="contactForm"> 
-        <label for="Name">Name:</label>
-        <input type="text" id="Name" name="Name" required>
-
-        <label for="Surname">Surname:</label>
-        <input type="text" id="Surname" name="Surname" required>
-
-        <label for="Email">Email:</label>
-        <input type="text" id="Email" name="Email" required>
-
-        <label for="Comment">Comment:</label>
-        <textarea name="Comment" rows="4" style="width: 45%; padding: 8px; border: solid 2px #000;" required></textarea><br>
-
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-
-    <!-- Submission Response -->
-    <p id="responseMessage"></p>
-
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        
-        // Get the name value to display in the response message
-        var name = document.getElementById("Name").value;
-
-        // Get the email value to validate it
-        var email = document.getElementById("Email").value;
-        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-        // Validate email
-        if (!emailPattern.test(email)) {
-          alert("Please enter a valid email address.");
-          return;
-        }
-
-        // Display personalized response message
-        document.getElementById('responseMessage').style.display = 'block'; 
-        document.getElementById('responseMessage').innerHTML = "Thank you, " + name + ", for your time! Your message has been successfully sent.";
-        document.getElementById('responseMessage').style.color = "green"; // Change text color to green
-
-        // Optionally clear the form after submission
-        document.getElementById('contactForm').reset();
-      });
-    </script>
+    <p>If you wish to contact me through another means,</p>
 
     <!-- Social Media -->
     <div class="social_links">
@@ -149,7 +100,8 @@
         <li><a href="https://www.facebook.com/dian.vaneyk.9">Facebook</a></li>
         <li><a href="https://www.instagram.com/dian_van_eyk/?hl=en">Instagram</a></li>
         <li><a href="https://www.linkedin.com/in/dian-van-eyk-b6b6ab28b/">LinkedIn</a></li>
-        <li><a href="Dian Rohen van Eyk CV (3).pdf"download>My CV</a></li>
+        <li>Email:Dian.vanEyk2003@gmail.com</li>
+        <li><a href="Dian Rohen van Eyk CV.pdf"download>My CV</a></li>
       </ul>
     </div>
   </section>
