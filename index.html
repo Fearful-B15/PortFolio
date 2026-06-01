@@ -11,12 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS (MAKE SURE THIS FOLDER NAME MATCHES YOUR GITHUB) -->
-  <link rel="stylesheet" href="css/PrimeStyle.css">
+  <!-- ✅ FIXED CSS PATH (YOUR FOLDER IS CSS IN CAPS) -->
+  <link rel="stylesheet" href="CSS/PrimeStyle.css">
 
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
 
-  <!-- EXTRA CAROUSEL FIX CSS (safe fallback if CSS file fails) -->
+  <!-- SAFE CAROUSEL CSS (so it still works even if external CSS breaks) -->
   <style>
     .carousel-wrapper {
       position: relative;
@@ -183,28 +183,29 @@
     <p>© 2026 Dian van Eyk | Portfolio Website</p>
   </footer>
 
-  <!-- CAROUSEL JS (FIXED + STABLE) -->
+  <!-- FIXED CAROUSEL JS -->
   <script>
     const track = document.querySelector(".carousel-track");
     const next = document.querySelector(".next");
     const prev = document.querySelector(".prev");
 
     let index = 0;
-    const slideWidth = 600;
+
+    function getWidth() {
+      return track.querySelector("img").offsetWidth;
+    }
 
     next.addEventListener("click", () => {
-      const maxIndex = track.children.length - 1;
-
-      if (index < maxIndex) {
+      if (index < track.children.length - 1) {
         index++;
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
+        track.style.transform = `translateX(-${index * getWidth()}px)`;
       }
     });
 
     prev.addEventListener("click", () => {
       if (index > 0) {
         index--;
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
+        track.style.transform = `translateX(-${index * getWidth()}px)`;
       }
     });
   </script>
