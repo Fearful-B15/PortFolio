@@ -11,10 +11,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="CSS/PrimeStyle.css">
+  <!-- CSS (MAKE SURE THIS FOLDER NAME MATCHES YOUR GITHUB) -->
+  <link rel="stylesheet" href="css/PrimeStyle.css">
 
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
+
+  <!-- EXTRA CAROUSEL FIX CSS (safe fallback if CSS file fails) -->
+  <style>
+    .carousel-wrapper {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-track img {
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    p, ul {
+      text-align: left;
+    }
+  </style>
 
 </head>
 
@@ -43,10 +88,9 @@
       <h2>Creative Design & Web Development Portfolio</h2>
       <p>
         I am an aspiring UI artist and website developer. Welcome to my personal portfolio!
-        Here you can explore my projects, skills, and creative work.
       </p>
       <p>
-        I enjoy building websites, designing visuals, and constantly challenging myself with new creative ideas.
+        I enjoy building websites, designing visuals, and learning new creative skills.
       </p>
     </section>
 
@@ -66,32 +110,30 @@
       <h3>My Hobbies</h3>
 
       <div class="hobby-grid">
-
         <div class="card">
           <h4>Poster Design</h4>
-          <p>Creating artistic promotional posters for businesses and events.</p>
+          <p>Creating promotional posters for events and brands.</p>
         </div>
 
         <div class="card">
           <h4>Web Development</h4>
-          <p>Building creative websites and experimenting with new ideas.</p>
+          <p>Building websites and experimenting with new ideas.</p>
         </div>
 
         <div class="card">
           <h4>Graphic Design</h4>
-          <p>Using Canva and Adobe tools for visual design and graphics.</p>
+          <p>Using Canva and Adobe tools for visuals.</p>
         </div>
 
         <div class="card">
           <h4>Learning</h4>
-          <p>Constantly improving and learning new creative skills.</p>
+          <p>Constantly improving creative skills.</p>
         </div>
 
         <div class="card">
           <h4>⚔ Miniature Painting</h4>
-          <p>Painting Warhammer and fantasy models.</p>
+          <p>Painting Warhammer models.</p>
         </div>
-
       </div>
     </section>
 
@@ -106,9 +148,9 @@
 
         <div class="carousel-track">
 
-          <img src="Project screenshots/Post 1.png" alt="Poster 1">
-          <img src="Project screenshots/Post 2.png" alt="Poster 2">
-          <img src="Project screenshots/Post 3.png" alt="Poster 3">
+          <img src="Project screenshots/Post 1.png" alt="Project 1">
+          <img src="Project screenshots/Post 2.png" alt="Project 2">
+          <img src="Project screenshots/Post 3.png" alt="Project 3">
           <img src="Photos/DR van Eyk (1).png" alt="Portrait">
           <img src="Photos/Laprissaurus.jpg" alt="Illustration">
           <img src="Photos/Tiger Day Raising.jpg" alt="Tiger infographic">
@@ -141,31 +183,28 @@
     <p>© 2026 Dian van Eyk | Portfolio Website</p>
   </footer>
 
-  <!-- CAROUSEL JS -->
+  <!-- CAROUSEL JS (FIXED + STABLE) -->
   <script>
     const track = document.querySelector(".carousel-track");
     const next = document.querySelector(".next");
     const prev = document.querySelector(".prev");
 
     let index = 0;
-
-    function getSlideWidth() {
-      return track.querySelector("img").clientWidth;
-    }
+    const slideWidth = 600;
 
     next.addEventListener("click", () => {
       const maxIndex = track.children.length - 1;
 
       if (index < maxIndex) {
         index++;
-        track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
       }
     });
 
     prev.addEventListener("click", () => {
       if (index > 0) {
         index--;
-        track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
       }
     });
   </script>
