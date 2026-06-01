@@ -11,10 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- ✅ YOUR GITHUB CSS FOLDER (MUST BE CSS IN CAPS) -->
-  <link rel="stylesheet" href="CSS/PrimeStyle.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/PrimeStyle.css">
 
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
+
+  <!-- SMALL FIX CSS (ONLY FOR THIS PAGE) -->
+  <style>
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    ul {
+      text-align: left;
+    }
+  </style>
 
 </head>
 
@@ -42,10 +57,11 @@
     <section>
       <h2>Creative Design & Web Development Portfolio</h2>
       <p>
-        I am an aspiring UI artist and web developer. Welcome to my portfolio.
+        I am an aspiring UI artist and website developer. Welcome to my personal portfolio!
+        Here you can explore my projects, skills, and creative work.
       </p>
       <p>
-        I enjoy building websites and improving my creative skills.
+        I enjoy building websites, designing visuals, and constantly challenging myself with new creative ideas.
       </p>
     </section>
 
@@ -65,37 +81,39 @@
       <h3>My Hobbies</h3>
 
       <div class="hobby-grid">
+
         <div class="card">
           <h4>Poster Design</h4>
-          <p>Creating promotional designs.</p>
+          <p>Creating artistic promotional posters for businesses and events.</p>
         </div>
 
         <div class="card">
           <h4>Web Development</h4>
-          <p>Building interactive websites.</p>
+          <p>Building creative websites and experimenting with new ideas.</p>
         </div>
 
         <div class="card">
           <h4>Graphic Design</h4>
-          <p>Designing visuals and layouts.</p>
+          <p>Using Canva and Adobe tools for visual design and graphics.</p>
         </div>
 
         <div class="card">
           <h4>Learning</h4>
-          <p>Constantly improving skills.</p>
+          <p>Constantly improving and learning new creative skills.</p>
         </div>
 
         <div class="card">
           <h4>⚔ Miniature Painting</h4>
-          <p>Painting fantasy miniatures.</p>
+          <p>Painting Warhammer and fantasy models.</p>
         </div>
+
       </div>
     </section>
 
     <!-- CAROUSEL -->
     <section>
       <h3>Featured Projects</h3>
-      <p>Click through my work</p>
+      <p>Click through my latest work.</p>
 
       <div class="carousel-wrapper">
 
@@ -103,18 +121,18 @@
 
         <div class="carousel-track">
 
-          <img src="Project screenshots/Post 1.png"alt="Project 1">
-          <img src="Project screenshots/Post 2.png"alt="Project 2">
-          <img src="Project screenshots/Post 3.png"alt="Project 3">
-          <img src="Photos/DR van Eyk (1).png"alt="Portrait">
-          <img src="Photos/Laprissaurus.jpg"alt="Illustration">
-          <img src="Photos/Tiger Day Raising.jpg"alt="Tiger infographic">
-          <img src="Photos/1.jpg"alt="Poster 1">
-          <img src="Photos/2.jpg"alt="Poster 2">
-          <img src="Photos/3.jpg"alt="Poster 3">
-          <img src="Photos/4.jpg"alt="Poster 4">
-          <img src="Photos/5.jpg"alt="Poster 5">
-          <img src="Photos/6.jpg"alt="Poster 6">
+          <img src="Project screenshots/Post 1.png" alt="Poster 1">
+          <img src="Project screenshots/Post 2.png" alt="Poster 2">
+          <img src="Project screenshots/Post 3.png" alt="Poster 3">
+          <img src="Photos/DR van Eyk (1).png" alt="Portrait">
+          <img src="Photos/Laprissaurus.jpg" alt="Illustration">
+          <img src="Photos/Tiger Day Raising.jpg" alt="Tiger infographic">
+          <img src="Photos/1.jpg" alt="Poster 1">
+          <img src="Photos/2.jpg" alt="Poster 2">
+          <img src="Photos/3.jpg" alt="Poster 3">
+          <img src="Photos/4.jpg" alt="Poster 4">
+          <img src="Photos/5.jpg" alt="Poster 5">
+          <img src="Photos/6.jpg" alt="Poster 6">
           <img src="Photos/Never walk alone in the woods printing.jpg" alt="Poster 7">
 
         </div>
@@ -127,7 +145,7 @@
     <!-- CTA -->
     <section>
       <h3>Let’s Work Together</h3>
-      <p>If you're interested in collaborating, contact me.</p>
+      <p>If you're interested in collaborating or hiring me, feel free to contact me.</p>
       <a href="Contact.html" class="button">Contact Me</a>
     </section>
 
@@ -135,10 +153,10 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Dian van Eyk</p>
+    <p>© 2026 Dian van Eyk | Portfolio Website</p>
   </footer>
 
-  <!-- STABLE CAROUSEL JS (NO BREAKING ISSUES) -->
+  <!-- CAROUSEL JS -->
   <script>
     const track = document.querySelector(".carousel-track");
     const next = document.querySelector(".next");
@@ -147,11 +165,13 @@
     let index = 0;
 
     function getSlideWidth() {
-      return document.querySelector(".carousel-wrapper").offsetWidth;
+      return track.querySelector("img").clientWidth;
     }
 
     next.addEventListener("click", () => {
-      if (index < track.children.length - 1) {
+      const maxIndex = track.children.length - 1;
+
+      if (index < maxIndex) {
         index++;
         track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
       }
