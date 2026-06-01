@@ -11,37 +11,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- ✅ FIXED: MUST MATCH GITHUB FOLDER EXACTLY -->
   <link rel="stylesheet" href="CSS/PrimeStyle.css">
 
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
 
-  <!-- EXTRA PAGE FIXES -->
+  <!-- PAGE FIX CSS -->
   <style>
-
-    /* HEADINGS CENTERED */
     h1, h2, h3 {
       text-align: center;
     }
 
-    /* GENERAL TEXT LEFT */
     p, ul, li {
       text-align: left;
     }
 
-    /* HOBBY SECTION FIX */
-    .hobby-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      text-align: left; /* THIS FIXES YOUR HOBBY TEXT */
-      padding: 15px;
-    }
-
-    /* CAROUSEL */
     .carousel-wrapper {
       position: relative;
       max-width: 600px;
@@ -76,6 +60,16 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
+    .hobby-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      text-align: left;
+      padding: 15px;
+    }
   </style>
 
 </head>
@@ -104,7 +98,7 @@
     <section>
       <h2>Creative Design & Web Development Portfolio</h2>
       <p>
-        I am an aspiring UI artist and web developer. Welcome to my portfolio.
+        I am an aspiring UI artist and web developer. Welcome to my portfolio!
       </p>
       <p>
         I enjoy building websites and improving my creative skills.
@@ -199,7 +193,7 @@
     <p>© 2026 Dian van Eyk</p>
   </footer>
 
-  <!-- CAROUSEL JS -->
+  <!-- FIXED CAROUSEL JS -->
   <script>
     const track = document.querySelector(".carousel-track");
     const next = document.querySelector(".next");
@@ -207,23 +201,29 @@
 
     let index = 0;
 
-    function getSlideWidth() {
+    function getWidth() {
       return document.querySelector(".carousel-wrapper").offsetWidth;
+    }
+
+    function update() {
+      track.style.transform = `translateX(-${index * getWidth()}px)`;
     }
 
     next.addEventListener("click", () => {
       if (index < track.children.length - 1) {
         index++;
-        track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+        update();
       }
     });
 
     prev.addEventListener("click", () => {
       if (index > 0) {
         index--;
-        track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+        update();
       }
     });
+
+    window.addEventListener("resize", update);
   </script>
 
 </body>
