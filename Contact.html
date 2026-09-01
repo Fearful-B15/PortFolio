@@ -3,66 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contact Me</title>
+  <title>Contact Me | Dian van Eyk</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="CSS/PrimeStyle.css">
   <link rel="stylesheet" href="CSS/Screensizes.css">
 
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f1a;
+      color: #e2e8f0;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+      color: #ffffff;
+    }
+
+    p, ul, li {
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    /* NAV */
+    .topnav {
+      display: flex;
+      justify-content: center;
+      background: rgba(15, 15, 26, 0.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topnav a {
+      color: #94a3b8;
+      text-decoration: none;
+      padding: 8px 16px;
+      margin: 0 10px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .topnav a:hover {
+      color: #6a5af9;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: radial-gradient(circle at top, #1e1b4b 0%, #0f0f1a 100%);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #a5b4fc;
+    }
+
+    /* SOCIAL LINKS */
+    .social_links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .social_links li a {
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #a5b4fc;
+      transition: all 0.3s ease;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .social_links li a:hover {
+      background: linear-gradient(45deg, #3515d3, #6a5af9);
+      border-color: transparent;
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(106, 90, 249, 0.4);
+    }
+
+    p {
+      text-align: center;
+      color: #94a3b8;
+      max-width: 680px;
+      margin: 0 auto 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
+      h3 { font-size: 1.3rem; }
+      .social_links li a { min-width: 160px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
-    <h1>Contact Me</h1>
-    <p>Let’s connect and create something amazing together</p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Contact Me</h1>
+      <p>Let's connect and create something amazing together</p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="topnav">
+    <a href="index.html">My Home</a>
+    <a href="Case Studies.html">My Case Studies</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- INTRO -->
+    <section>
+      <h2>Get In Touch</h2>
+      <p>
+        Thank you for visiting my portfolio. I'm always open to feedback, collaboration,
+        and new opportunities in web development, UI design, and creative media.
+      </p>
+      <p>
+        Whether it's a project, internship, or freelance idea — feel free to reach out.
+      </p>
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <section>
+      <h3>Connect With Me</h3>
+      <ul class="social_links">
+        <li><a href="https://www.facebook.com/dian.vaneyk.9" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/dian_van_eyk/?hl=en" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/dian-van-eyk-b6b6ab28b/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:Dian.vanEyk2003@gmail.com">Email Me</a></li>
+        <li><a href="Dian Rohen van Eyk CV.pdf" download>Download My CV</a></li>
+      </ul>
+    </section>
+
   </div>
-</header>
 
-<!-- NAVIGATION -->
-<nav class="topnav">
-  <a href="index.html">My Home</a>
-  <a href="Case Studies.html">My Case Studies</a>
-  <a href="Skills.html">About Me</a>
-  <a href="Contact.html">Contact Me</a>
-</nav>
-
-<div class="container">
-
-  <!-- INTRO SECTION -->
-  <section>
-    <h2>Get In Touch</h2>
-
-    <p>
-      Thank you for visiting my portfolio. I’m always open to feedback, collaboration,
-      and new opportunities in web development, UI design, and creative media.
-    </p>
-
-    <p>
-      Whether it’s a project, internship, or freelance idea — feel free to reach out.
-    </p>
-  </section>
-
-  <!-- SOCIAL LINKS -->
-  <section>
-    <h3>Connect With Me</h3>
-
-    <ul class="social_links">
-      <li><a href="https://www.facebook.com/dian.vaneyk.9" target="_blank">Facebook</a></li>
-      <li><a href="https://www.instagram.com/dian_van_eyk/?hl=en" target="_blank">Instagram</a></li>
-      <li><a href="https://www.linkedin.com/in/dian-van-eyk-b6b6ab28b/" target="_blank">LinkedIn</a></li>
-      <li><a href="mailto:Dian.vanEyk2003@gmail.com">Email Me</a></li>
-      <li><a href="Dian Rohen van Eyk CV.pdf" download>Download My CV</a></li>
-    </ul>
-  </section>
-
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Dian van Eyk. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

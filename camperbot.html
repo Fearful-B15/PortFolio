@@ -2,139 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CamperBot Case Study</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
   <link rel="stylesheet" type="text/css" href="CSS/Screensizes.css">
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
-
-  <style>
-    section {
-      display: block;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 15px;
-    }
-
-    .project {
-      padding: 10px;
-    }
-
-    .carousel-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 15px;
-      padding: 10px;
-      scroll-snap-type: x mandatory;
-    }
-
-    .carousel-container img {
-      flex: 0 0 auto;
-      scroll-snap-align: center;
-
-      width: 380px;
-      height: 260px;
-      object-fit: cover;
-
-      border-radius: 12px;
-    }
-
-    @media (max-width: 768px) {
-      .carousel-container img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    /* CENTERED SECTIONS */
-    .center {
+    <style>
+        /* HERO */
+    .hero {
       text-align: center;
+      padding: 90px 20px;
+      background: radial-gradient(circle at top, #1e1b4b 0%, #0f0f1a 100%);
     }
 
-    .center ul {
-      list-style-position: inside;
-      padding: 0;
-      margin: 0 auto;
-      display: inline-block;
-      text-align: left;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    .download-link {
-      display: block;
+    .hero p {
       text-align: center;
-      margin-top: 15px;
-      font-weight: bold;
+      font-size: 1.2rem;
+      color: #a5b4fc;
     }
-  </style>
+</style>
 </head>
 
 <body>
 
-<hr>
-<h1>CamperBot Case Study</h1>
-<hr>
-
-<div class="topnav">
-  <a href="index.html">My Home</a>
-  <a href="Case Studies.html">My Case Studies</a>
-  <a href="Skills.html">About Me</a>
-  <a href="Contact.html">Contact Me</a>
-</div>
-
-<hr>
-
-<section>
-  <div class="project">
-
-    <h2>CamperBot - AI Chatbot</h2>
-
-    <p>
-      CamperBot is an AI chatbot built to help users with camping information and guidance.
-    </p>
-
-    <h3>Overview</h3>
-
-    <p>
-      It allows users to interact naturally and get helpful camping advice and suggestions.
-    </p>
-
-    <!-- ✅ CENTERED FEATURES -->
-    <div class="center">
-
-      <h3>Features</h3>
-
-      <ul>
-        <li>Camping topic responses</li>
-        <li>Chat log export system</li>
-        <li>Expandable AI logic</li>
-      </ul>
-
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>CamperBot</h1>
+      <p>Case Study &bull; AI Chatbot</p>
     </div>
+  </header>
 
-    <h3>Technology Stack</h3>
+  <!-- NAV -->
+  <nav class="topnav">
+    <a href="index.html">My Home</a>
+    <a href="Case Studies.html">My Case Studies</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </nav>
 
-    <p class="center">
-      <strong>Python, NLTK, TensorFlow</strong>
-    </p>
+  <div class="container">
 
-    <h3>Project Screenshots</h3>
+    <section>
+      <div class="project">
 
-    <div class="carousel-container">
-      <img src="Project screenshots/Camperbot.png">
-      <img src="Project screenshots/CamperBot2.png">
-      <img src="Project screenshots/Camperbot3t.png">
-      <img src="Project screenshots/Camperbot4.png">
-      <img src="Project screenshots/CamperBot5.png">
-    </div>
+        <h2>CamperBot - AI Chatbot</h2>
 
-    <h3>Download</h3>
+        <p>
+          CamperBot is an AI chatbot built to help users with camping information and guidance.
+        </p>
 
-    <a class="download-link" href="Projects/Chatbot Code.zip" download>
-      Download Project
-    </a>
+        <h3>Overview</h3>
+
+        <p>
+          It allows users to interact naturally and get helpful camping advice and suggestions.
+        </p>
+
+        <div class="center">
+
+          <h3>Features</h3>
+
+          <ul>
+            <li>Camping topic responses</li>
+            <li>Chat log export system</li>
+            <li>Expandable AI logic</li>
+          </ul>
+
+        </div>
+
+        <h3>Technology Stack</h3>
+
+        <p class="tech-stack center">
+          Python, NLTK, TensorFlow
+        </p>
+
+        <h3>Project Screenshots</h3>
+
+        <div class="carousel-container">
+          <img src="Project screenshots/Camperbot.png" alt="CamperBot chat interface screenshot 1">
+          <img src="Project screenshots/CamperBot2.png" alt="CamperBot chat interface screenshot 2">
+          <img src="Project screenshots/CamperBot3t.png" alt="CamperBot chat interface screenshot 3">
+          <img src="Project screenshots/CamperBot4.png" alt="CamperBot chat interface screenshot 4">
+          <img src="Project screenshots/CamperBot5.png" alt="CamperBot chat interface screenshot 5">
+        </div>
+
+        <h3>Download</h3>
+
+        <a class="download-link" href="Projects/Chatbot Code.zip" download>
+          Download Project
+        </a>
+
+      </div>
+    </section>
 
   </div>
-</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Dian van Eyk. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

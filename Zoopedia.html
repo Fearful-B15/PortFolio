@@ -6,151 +6,96 @@
 
   <title>Zoopedia Website</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="CSS/PrimeStyle.css">
   <link rel="stylesheet" type="text/css" href="CSS/Screensizes.css">
   <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
-
   <style>
-    /* keep page clean + responsive with new global CSS */
-
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 5px auto;
-      padding: 25px;
-    }
-
-    .project {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+        /* HERO */
+    .hero {
       text-align: center;
+      padding: 90px 20px;
+      background: radial-gradient(circle at top, #1e1b4b 0%, #0f0f1a 100%);
     }
 
-    /* images now match your new system */
-    .project img {
-      width: 100%;
-      max-width: 750px;
-      height: 450px;
-      object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
-      margin: 10px auto;
-      display: block;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    ul {
-      text-align: left;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    a {
-      color: #111;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* carousel cleaned */
-    .carousel-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .carousel {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 10px;
-      max-width: 900px;
-    }
-
-    .carousel img {
-      flex: 0 0 auto;
-      width: 650px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 16px;
-      scroll-snap-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .carousel img {
-        width: 90%;
-        height: auto;
-      }
-
-      .project img {
-        height: auto;
-      }
+    .hero p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #a5b4fc;
     }
   </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <div>
-    <h1>Zoopedia Website</h1>
-    <p>Project Case Study Breakdown</p>
-  </div>
-</header>
-
-<nav class="topnav">
-  <a href="index.html">My Home</a>
-  <a href="Case Studies.html">My Case Studies</a>
-  <a href="Skills.html">About Me</a>
-  <a href="Contact.html">Contact Me</a>
-</nav>
-
-<section>
-
-  <div class="project">
-
-    <h2>Zoopedia</h2>
-
-    <p>
-      Zoopedia is an educational and informative website I developed as part of a formative assignment.
-      It allows users to compare zoos and wildlife parks based on pricing, animals, and features.
-    </p>
-
-    <h3>Features</h3>
-    <ul>
-      <li>Animal listings by location</li>
-      <li>Responsive and structured layout</li>
-      <li>Zoo comparison system</li>
-      <li>Educational browsing experience</li>
-    </ul>
-
-    <h3>Technology Stack</h3>
-    <p><strong>HTML, CSS, Responsive Layouts</strong></p>
-
-    <h3>Project Screenshots</h3>
-
-    <div class="carousel-container">
-      <div class="carousel">
-        <img src="Project screenshots/Zoopedia_2.png" alt="Zoopedia homepage">
-        <img src="Project screenshots/Zoopedia 1.jpg" alt="Animal comparison">
-        <img src="Project screenshots/Zoopedia3.png" alt="Pricing table">
-      </div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Zoopedia Website</h1>
+      <p>Project Case Study Breakdown</p>
     </div>
+  </header>
 
-    <h3>Download Project</h3>
-    <p>Download the full source code below:</p>
-    <a href="Projects/Zoopedia.zip" download>Download Zoopedia Website</a>
+  <!-- NAV -->
+  <nav class="topnav">
+    <a href="index.html">My Home</a>
+    <a href="Case Studies.html">My Case Studies</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </nav>
+
+  <div class="container">
+
+    <section>
+      <div class="project-showcase">
+
+        <h2>Zoopedia</h2>
+
+        <p>
+          Zoopedia is an educational and informative website I developed as part of a formative assignment.
+          It allows users to compare zoos and wildlife parks based on pricing, animals, and features.
+        </p>
+
+        <h3>Features</h3>
+        <ul>
+          <li>Animal listings by location</li>
+          <li>Responsive and structured layout</li>
+          <li>Zoo comparison system</li>
+          <li>Educational browsing experience</li>
+        </ul>
+
+        <h3>Technology Stack</h3>
+        <p class="tech-stack">HTML, CSS, Responsive Layouts</p>
+
+        <h3>Project Screenshots</h3>
+
+        <div class="carousel-container">
+            <img src="Project screenshots/Zoopedia_2.png" alt="Zoopedia homepage">
+            <img src="Project screenshots/Zoopedia 1.jpg" alt="Animal comparison">
+            <img src="Project screenshots/Zoopedia3.png" alt="Pricing table">
+          </div>
+
+        <h3>Download Project</h3>
+        <p>Download the full source code below:</p>
+        <a class="download-link" href="Projects/Zoopedia.zip" download>Download Zoopedia Website</a>
+
+      </div>
+    </section>
 
   </div>
 
-</section>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Dian van Eyk. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

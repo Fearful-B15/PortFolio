@@ -1,199 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Dian van Eyk</title>
 
-<title>Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="CSS/PrimeStyle.css">
-<link rel="stylesheet" href="CSS/Screensizes.css">
-<link rel="icon" href="Dian van Eyk logo.png">
+  <link rel="stylesheet" href="CSS/PrimeStyle.css">
+  <link rel="stylesheet" href="CSS/Screensizes.css">
+  <link rel="icon" type="image/x-icon" href="Dian van Eyk logo.png">
 
-<style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f1a;
+      color: #e2e8f0;
+    }
 
-/* =========================
-   SKILLS ANIMATED PAGE
-========================= */
+    h1, h2, h3, h4 {
+      text-align: center;
+      color: #ffffff;
+    }
 
-.skill {
-  margin: 25px auto;
-  max-width: 700px;
-  text-align: center;
-}
+    p, ul, li {
+      text-align: left;
+      line-height: 1.6;
+    }
 
-.skill-name {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-.progress {
-  width: 100%;
-  height: 28px;
-  background: #fff;
-  border: 3px solid #000;
-  border-radius: 10px;
-  overflow: hidden;
-}
+    section {
+      margin-bottom: 60px;
+    }
 
-.progress-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #3515d3, #6a5af9);
-  transition: width 1.8s ease-in-out;
-}
+    /* NAV */
+    .topnav {
+      display: flex;
+      justify-content: center;
+      background: rgba(15, 15, 26, 0.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-.progress-percentage {
-  margin-top: 6px;
-  font-weight: bold;
-}
+    .topnav a {
+      color: #94a3b8;
+      text-decoration: none;
+      padding: 8px 16px;
+      margin: 0 10px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-/* Animated states */
-.progress-bar.animate.progress-bar-1 { width: 85%; }
-.progress-bar.animate.progress-bar-2 { width: 88%; }
-.progress-bar.animate.progress-bar-3 { width: 80%; }
-.progress-bar.animate.progress-bar-4 { width: 78%; }
-.progress-bar.animate.progress-bar-5 { width: 82%; }
+    .topnav a:hover {
+      color: #6a5af9;
+    }
 
-/* text styling */
-h2, h3, p, li {
-  text-align: center;
-}
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: radial-gradient(circle at top, #1e1b4b 0%, #0f0f1a 100%);
+    }
 
-ul {
-  list-style-position: inside;
-  padding: 0;
-}
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-/* layout */
-section {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 20px;
-}
+    .hero p {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #a5b4fc;
+    }
 
-</style>
+    /* LISTS */
+    ul {
+      list-style-position: inside;
+      padding: 0;
+      color: #cbd5e1;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #a5b4fc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #6a5af9;
+    }
+
+    /* SKILL BARS */
+    .skill {
+      margin: 25px auto;
+      max-width: 700px;
+    }
+
+    .skill-name {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #a5b4fc;
+      text-align: left;
+    }
+
+    .progress {
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3515d3, #6a5af9);
+      border-radius: 10px;
+      transition: width 1.8s ease-in-out;
+    }
+
+    .progress-percentage {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #64748b;
+      text-align: right;
+    }
+
+    /* Animated states */
+    .progress-bar.animate.progress-bar-1 { width: 85%; }
+    .progress-bar.animate.progress-bar-2 { width: 88%; }
+    .progress-bar.animate.progress-bar-3 { width: 80%; }
+    .progress-bar.animate.progress-bar-4 { width: 78%; }
+    .progress-bar.animate.progress-bar-5 { width: 82%; }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
+      h3 { font-size: 1.3rem; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div>
-    <h1>About Me</h1>
-    <p>Education, certifications & skills</p>
-  </div>
-</header>
-
-<!-- NAV -->
-<div class="topnav">
-  <a href="index.html">My Home</a>
-  <a href="Case Studies.html">My Case Studies</a>
-  <a href="Skills.html">About Me</a>
-  <a href="Contact.html">Contact Me</a>
-</div>
-
-<section>
-
-  <!-- EDUCATION -->
-  <h2>My Education</h2>
-
-  <h3>Martie du Plessis</h3>
-  <ul>
-    <li>Afrikaans Home Language: 66%</li>
-    <li>English First Additional Language: 70%</li>
-    <li>Mathematical Literacy: 71%</li>
-    <li>Life Orientation: 73%</li>
-    <li>Life Sciences: 50%</li>
-    <li>Business Studies: 48%</li>
-    <li>Computer Applications Technology: 72%</li>
-    <li>Honorary Colours: Academic</li>
-    <li>Top Achiever in Business Studies & Afrikaans</li>
-  </ul>
-
-  <h3>CTU Training Solutions</h3>
-  <p>
-    UI/UX design, programming and 3D modelling studies (2023–2025).
-  </p>
-
-  <!-- CERTIFICATIONS -->
-  <h2>Certifications</h2>
-
-  <ul>
-    <li><a href="#" download>Azure Data Fundamentals</a></li>
-    <li><a href="#">HTML & CSS Certification</a></li>
-    <li><a href="#">Adobe Photoshop Certified</a></li>
-    <li><a href="#">Adobe Illustrator Certified</a></li>
-    <li><a href="#">Adobe Design Certified</a></li>
-    <li><a href="#">Meta Digital Marketing Associate</a></li>
-  </ul>
-
-  <!-- SKILLS -->
-  <h2>My Skills</h2>
-
-  <div class="skill">
-    <div class="skill-name">Graphic Design</div>
-    <div class="progress">
-      <div class="progress-bar progress-bar-1"></div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>About Me</h1>
+      <p>Education, certifications &amp; skills</p>
     </div>
-    <div class="progress-percentage">85%</div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="topnav">
+    <a href="index.html">My Home</a>
+    <a href="Case Studies.html">My Case Studies</a>
+    <a href="Skills.html">About Me</a>
+    <a href="Contact.html">Contact Me</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>My Education</h2>
+
+      <h3>Martie du Plessis</h3>
+      <ul>
+        <li>Afrikaans Home Language: 66%</li>
+        <li>English First Additional Language: 70%</li>
+        <li>Mathematical Literacy: 71%</li>
+        <li>Life Orientation: 73%</li>
+        <li>Life Sciences: 50%</li>
+        <li>Business Studies: 48%</li>
+        <li>Computer Applications Technology: 72%</li>
+        <li>Honorary Colours: Academic</li>
+        <li>Top Achiever in Business Studies &amp; Afrikaans</li>
+      </ul>
+
+      <h3>CTU Training Solutions</h3>
+      <p style="text-align: center; color: #94a3b8;">
+        UI/UX design, programming and 3D modelling studies (2023–2025).
+      </p>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li><a href="#" download>Azure Data Fundamentals</a></li>
+        <li><a href="#">HTML &amp; CSS Certification</a></li>
+        <li><a href="#">Adobe Photoshop Certified</a></li>
+        <li><a href="#">Adobe Illustrator Certified</a></li>
+        <li><a href="#">Adobe Design Certified</a></li>
+        <li><a href="#">Meta Digital Marketing Associate</a></li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>My Skills</h2>
+
+      <div class="skill">
+        <div class="skill-name">Graphic Design</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-1"></div>
+        </div>
+        <div class="progress-percentage">85%</div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Web Design</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-2"></div>
+        </div>
+        <div class="progress-percentage">88%</div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Research Skills</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-3"></div>
+        </div>
+        <div class="progress-percentage">80%</div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Computing Skills</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-4"></div>
+        </div>
+        <div class="progress-percentage">78%</div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Social Skills</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-5"></div>
+        </div>
+        <div class="progress-percentage">82%</div>
+      </div>
+    </section>
+
   </div>
 
-  <div class="skill">
-    <div class="skill-name">Web Design</div>
-    <div class="progress">
-      <div class="progress-bar progress-bar-2"></div>
-    </div>
-    <div class="progress-percentage">88%</div>
-  </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Dian van Eyk. All rights reserved.</p>
+  </footer>
 
-  <div class="skill">
-    <div class="skill-name">Research Skills</div>
-    <div class="progress">
-      <div class="progress-bar progress-bar-3"></div>
-    </div>
-    <div class="progress-percentage">80%</div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-name">Computing Skills</div>
-    <div class="progress">
-      <div class="progress-bar progress-bar-4"></div>
-    </div>
-    <div class="progress-percentage">78%</div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-name">Social Skills</div>
-    <div class="progress">
-      <div class="progress-bar progress-bar-5"></div>
-    </div>
-    <div class="progress-percentage">82%</div>
-  </div>
-
-</section>
-
-<!-- ANIMATION SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const bars = document.querySelectorAll(".progress-bar");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate");
-      }
+  <!-- ANIMATION SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bars = document.querySelectorAll(".progress-bar");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, { threshold: 0.4 });
+      bars.forEach(bar => observer.observe(bar));
     });
-  }, {
-    threshold: 0.4
-  });
-
-  bars.forEach(bar => observer.observe(bar));
-
-});
-</script>
+  </script>
 
 </body>
 </html>

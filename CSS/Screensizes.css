@@ -256,26 +256,6 @@ iframe {
 }
 
 /* =========================
-   POSTER GALLERIES
-========================= */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-items: center;
-}
-
-.gallery-grid img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  aspect-ratio: 6 / 5;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* =========================
    LARGE POSTERS
 ========================= */
 
@@ -348,7 +328,6 @@ iframe {
   }
 
   .project-image,
-  .gallery-grid img,
   .poster-large {
     width: 100%;
     max-width: 100%;
